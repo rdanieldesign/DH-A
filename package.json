@@ -1,0 +1,28 @@
+{
+  "name": "DHA",
+  "version": "1.0.0",
+  "description": "Welcome to Craft!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdanieldesign/DH-A.git"
+  },
+  "author": "Richard Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdanieldesign/DH-A/issues"
+  },
+  "homepage": "https://github.com/rdanieldesign/DH-A",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-watch": "^4.3.5"
+  }
+}
