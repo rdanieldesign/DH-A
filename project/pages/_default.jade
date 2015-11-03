@@ -1,0 +1,12 @@
+doctype html
+html(lang='en-US')
+	head
+		meta(charset='utf-8')
+		title {% if title is defined %}{{ title }} - {% endif %}{{ siteName }}
+		link(rel='home' href='{{ siteUrl }}')
+	body
+		#container
+			include ../components/navigation/navigation.jade
+			main#content(role='main')
+				block body
+			include ../components/footer/footer.jade
