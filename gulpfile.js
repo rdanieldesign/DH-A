@@ -17,7 +17,7 @@ gulp.task('browserSync', function() {
         notify: false,
         open: true,
         server: {
-            baseDir: "./tmp/templates/homepage"
+            baseDir: "./tmp"
         }
     });
 });

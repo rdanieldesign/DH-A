@@ -1,12 +1,21 @@
+if devMode
+	- var stylePath = '../../styles'
+	- var scriptPath = '../../scripts'
+else
+	- var stylePath = '{{ siteUrl }}/styles'
+	- var scriptPath = '{{ siteUrl }}/scripts'
+
 doctype html
 html(lang='en-US')
 	head
 		meta(charset='utf-8')
 		title {% if title is defined %}{{ title }} - {% endif %}{{ siteName }}
 		link(rel='home' href='{{ siteUrl }}')
+		link(rel="stylesheet" href="#{stylePath}/main.css")
 	body
 		#container
 			include ../components/navigation/navigation.jade
 			main#content(role='main')
 				block body
 			include ../components/footer/footer.jade
+	script(src='#{scriptPath}/main.js')
