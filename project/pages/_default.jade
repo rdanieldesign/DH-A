@@ -13,9 +13,8 @@ html(lang='en-US')
 		link(rel='home' href='{{ siteUrl }}')
 		link(rel="stylesheet" href="#{stylePath}/main.css")
 	body
-		#container
+		.wrapper
 			include ../components/navigation/navigation.jade
-			main#content(role='main')
-				block body
+			block body
 			include ../components/footer/footer.jade
 	script(src='#{scriptPath}/main.js')

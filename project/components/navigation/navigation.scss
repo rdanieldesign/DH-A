@@ -1,0 +1,24 @@
+.navigation {
+	position: fixed;
+	margin: 0 auto;
+	background-color: grey;
+
+
+	.logo {
+		display: inline-block;
+		margin: 1rem 0;
+	}
+
+	.nav-links {
+		float: right;
+		display: inline-block;
+		width: 50%;
+		margin: 2.8rem 1rem;
+
+		li {
+			text-align: right;
+			display: inline-block;
+			width: 32%;
+		}
+	}
+}

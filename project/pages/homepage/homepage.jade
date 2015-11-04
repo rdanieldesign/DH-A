@@ -1,6 +1,5 @@
 if devMode
 	- var pageTitle = 'Homepage'
-	- var list = ['test', 'test2']
 else
 	- var pageTitle = '{{ entry.title }}'
 	
@@ -8,11 +7,11 @@ extends ../_default.jade
 
 block body
 
+	include ../../components/hero/hero.jade
+
 	h1 #{pageTitle}
 
 	| {{ entry.body }}
-
-	h2 Recent News
 
 	ul
 		if devMode

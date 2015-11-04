@@ -1,1 +1,20 @@
-h1 hello
+if devMode
+	- var heroImg = 'http://placehold.it/800x800'
+	- var headline = 'This is my local headline'
+	- var copy = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque minus sapiente omnis ut quidem perspiciatis molestiae ex, quibusdam quae necessitatibus odit ratione laboriosam, earum sed. Expedita corporis, sunt inventore fugit!'
+	- var btnText = 'Local Button'
+	- var btnURL = '#'
+else
+	| {% set image = entry.heroImg.first() %}
+	- var heroImg = '{{ image.url }}'
+	- var headline = '{{ entry.heroHeadline }}'
+	- var copy = '{{ entry.heroText }}'
+	- var btnText = '{{ entry.heroButtonText }}'
+	- var btnURL = '{{ siteUrl }}{{ entry.heroBtnUrl }}'
+	
+section.hero.full(style='background-image: url(#{heroImg})')
+	.container
+		h1 #{headline}
+		p  #{copy}
+		a(href=btnURL)
+			button #{btnText}

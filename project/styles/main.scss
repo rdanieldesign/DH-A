@@ -1,3 +1,7 @@
-#container {
-	background: blue;
-}
+@import 'standards';
+@import 'containers';
+@import '../../node_modules/normalize.css/normalize';
+
+// Components
+@import '../components/navigation/navigation';
+@import '../components/hero/hero';

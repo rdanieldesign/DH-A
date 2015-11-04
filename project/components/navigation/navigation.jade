@@ -1,11 +1,22 @@
-header#header
-	nav
-		h1
-			a(href='{{ siteUrl }}') {{ siteName }}
-		ul
+if devMode
+	- var logoImg = 'http://placehold.it/150x75'
+	- var homeURL = '#'
+	- var aboutURL = '#'
+	- var contactURL = '#'
+	- var workURL= '#'
+else
+	- var logoImg = ''
+	- var homeUrl = '{{ siteUrl }}'
+
+nav.navigation.full
+	.container
+		figure.logo
+			a(href=homeUrl)
+				img(src=logoImg)
+		ul.nav-links
 			li
-				a(href='#') About
+				a(href=aboutURL) About
 			li
-				a(href='#') Contact
+				a(href=contactURL) Contact
 			li
-				a(href='#') Work
+				a(href=workURL) Work
